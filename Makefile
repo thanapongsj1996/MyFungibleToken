@@ -12,7 +12,7 @@ yarn-init:
 	yarn add web3
 	yarn add bn.js
 truffle-compile:
-	yarn truffle compile
+	truffle compile
 	yarn run typechain --target=web3-v1 'build/contracts/*.json'
 test-js:
 	yarn run jest --testTimeout=60000
