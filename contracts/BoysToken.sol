@@ -5,10 +5,10 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract BoysToken is Ownable, ERC20 {
+    // ไปเรียก constructor ของ ERC20 ด้วย (string memory name_, string memory symbol_)
     constructor() ERC20("BoysToken", "BoysToken") {}
 
     function mint(address receiverAddr, uint256 amount) public onlyOwner {
-        require(receiverAddr != address(0), "Do not mint to zero address!");
         _mint(receiverAddr, amount);
     }
 }
